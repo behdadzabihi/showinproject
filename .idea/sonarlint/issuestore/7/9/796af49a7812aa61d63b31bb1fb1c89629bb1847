@@ -1,0 +1,11 @@
+
+e
+java:S2259Þ"NA "NullPointerException" could be thrown; "getRequiredType()" can return null.(ÞŒ¸°
+Z
+java:S2387"D"logger" is the name of a field in "ResponseEntityExceptionHandler".(·“Â¢
+Q	java:S125w"<This block of commented-out lines of code should be removed.(—Ô§Ó
+\
+java:S1854ª"ERemove this useless assignment to local variable "servletWebRequest".(¹¡úè
+M
+java:S1481ª"6Remove this unused "servletWebRequest" local variable.(¹¡úè
+W	java:S125«"<This block of commented-out lines of code should be removed.(Ž¹Þûüÿÿÿÿ
