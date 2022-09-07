@@ -49,8 +49,5 @@ public class UserApp extends BaseEntity {
     @OneToMany(fetch = FetchType.LAZY,mappedBy = "userApp",cascade = CascadeType.ALL)
     private List<Comment> comments;
 
-    @OneToMany(fetch = FetchType.LAZY,mappedBy ="userApp",cascade = CascadeType.ALL)
-    private List<FileAttachment>  fileAttachments;
-
 
 }

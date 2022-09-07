@@ -3,7 +3,6 @@ package krd.kurdestansoft.showin.file_attachment;
 import krd.kurdestansoft.showin.common.exception.NotFoundException;
 import krd.kurdestansoft.showin.place.IPlaceService;
 import krd.kurdestansoft.showin.place.Place;
-import krd.kurdestansoft.showin.user.IUserService;
 import krd.kurdestansoft.showin.user.UserApp;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -18,15 +17,12 @@ public class FileAttachmentServiceImpl implements IFileAttachmentService {
     private  final FileAttachmentRepository repository;
     private  final IPlaceService placeService;
 
-    private final IUserService userService;
+
 
 
 
     @Override
     public FileAttachment save(FileAttachment fileAttachment) {
-        Long userId=fileAttachment.getUserApp().getId();
-        UserApp userApp=userService.getById(userId);
-        fileAttachment.setUserApp(userApp);
         Long plcId=  fileAttachment.getPlace().getId();
         Place place=  placeService.getById(plcId);
         fileAttachment.setPlace(place);
@@ -63,11 +59,6 @@ public class FileAttachmentServiceImpl implements IFileAttachmentService {
         return repository.findByPlace(place);
     }
 
-    @Override
-    public List<FileAttachment> getByUserApp(Long userAppId) {
-        UserApp userApp=userService.getById(userAppId);
-        return repository.findByUserApp(userApp);
-    }
 
 
 }

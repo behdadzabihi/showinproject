@@ -10,5 +10,4 @@ public interface IFileAttachmentService {
     List<FileAttachment> getAll();
     List<FileAttachment> getPlaceById(Long plcId);
 
-    List<FileAttachment> getByUserApp(Long userAppId);
 }

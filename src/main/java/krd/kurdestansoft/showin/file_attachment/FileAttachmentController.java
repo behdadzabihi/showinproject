@@ -62,11 +62,5 @@ public class FileAttachmentController {
         return ResponseEntity.ok(fileAttachmentDTOs);
     }
 
-    @GetMapping("/v1/filter-by-user/{userAppId}")
-    public ResponseEntity<List<FileAttachmentDTO>> filterByUser(@PathVariable Long userAppId){
-        List<FileAttachment> fileAttachments=service.getByUserApp(userAppId);
-        List<FileAttachmentDTO> fileAttachmentDTOS=mapper.toFileAttachmentDTOs(fileAttachments);
-        return ResponseEntity.ok(fileAttachmentDTOS);
-    }
 
 }

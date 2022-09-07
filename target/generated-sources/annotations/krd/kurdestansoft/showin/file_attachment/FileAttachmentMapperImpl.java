@@ -5,13 +5,11 @@ import java.util.List;
 import javax.annotation.processing.Generated;
 import krd.kurdestansoft.showin.place.Place;
 import krd.kurdestansoft.showin.place.PlaceDTO;
-import krd.kurdestansoft.showin.user.UserApp;
-import krd.kurdestansoft.showin.user.UserAppDTO;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-09-07T04:49:40-0700",
+    date = "2022-09-07T08:58:20-0700",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 18.0.2 (Oracle Corporation)"
 )
 @Component
@@ -33,7 +31,6 @@ public class FileAttachmentMapperImpl implements FileAttachmentMapper {
         fileAttachment.setLastModifiedBy( fileAttachmentDTO.getLastModifiedBy() );
         fileAttachment.setLocationImage( fileAttachmentDTO.getLocationImage() );
         fileAttachment.setPlace( placeDTOToPlace( fileAttachmentDTO.getPlace() ) );
-        fileAttachment.setUserApp( userAppDTOToUserApp( fileAttachmentDTO.getUserApp() ) );
 
         return fileAttachment;
     }
@@ -54,7 +51,6 @@ public class FileAttachmentMapperImpl implements FileAttachmentMapper {
         fileAttachmentDTO.setLastModifiedBy( fileAttachment.getLastModifiedBy() );
         fileAttachmentDTO.setLocationImage( fileAttachment.getLocationImage() );
         fileAttachmentDTO.setPlace( placeToPlaceDTO( fileAttachment.getPlace() ) );
-        fileAttachmentDTO.setUserApp( userAppToUserAppDTO( fileAttachment.getUserApp() ) );
 
         return fileAttachmentDTO;
     }
@@ -109,28 +105,6 @@ public class FileAttachmentMapperImpl implements FileAttachmentMapper {
         return place;
     }
 
-    protected UserApp userAppDTOToUserApp(UserAppDTO userAppDTO) {
-        if ( userAppDTO == null ) {
-            return null;
-        }
-
-        UserApp userApp = new UserApp();
-
-        userApp.setId( userAppDTO.getId() );
-        userApp.setVersion( userAppDTO.getVersion() );
-        userApp.setCreatedData( userAppDTO.getCreatedData() );
-        userApp.setCreatedBy( userAppDTO.getCreatedBy() );
-        userApp.setLastModifiedData( userAppDTO.getLastModifiedData() );
-        userApp.setLastModifiedBy( userAppDTO.getLastModifiedBy() );
-        userApp.setFirstName( userAppDTO.getFirstName() );
-        userApp.setLastName( userAppDTO.getLastName() );
-        userApp.setEmail( userAppDTO.getEmail() );
-        userApp.setGender( userAppDTO.getGender() );
-        userApp.setBirthDay( userAppDTO.getBirthDay() );
-
-        return userApp;
-    }
-
     protected PlaceDTO placeToPlaceDTO(Place place) {
         if ( place == null ) {
             return null;
@@ -151,27 +125,5 @@ public class FileAttachmentMapperImpl implements FileAttachmentMapper {
         placeDTO.setType( place.getType() );
 
         return placeDTO;
-    }
-
-    protected UserAppDTO userAppToUserAppDTO(UserApp userApp) {
-        if ( userApp == null ) {
-            return null;
-        }
-
-        UserAppDTO userAppDTO = new UserAppDTO();
-
-        userAppDTO.setId( userApp.getId() );
-        userAppDTO.setVersion( userApp.getVersion() );
-        userAppDTO.setCreatedData( userApp.getCreatedData() );
-        userAppDTO.setCreatedBy( userApp.getCreatedBy() );
-        userAppDTO.setLastModifiedData( userApp.getLastModifiedData() );
-        userAppDTO.setLastModifiedBy( userApp.getLastModifiedBy() );
-        userAppDTO.setFirstName( userApp.getFirstName() );
-        userAppDTO.setLastName( userApp.getLastName() );
-        userAppDTO.setEmail( userApp.getEmail() );
-        userAppDTO.setGender( userApp.getGender() );
-        userAppDTO.setBirthDay( userApp.getBirthDay() );
-
-        return userAppDTO;
     }
 }
