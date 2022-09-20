@@ -1,11 +1,0 @@
-
-E
-java:S3740&"/Provide the parametrized type for this generic.(øÚ•½
-m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´£›¼8«ŸÏš±0
-\
-java:S1128"?Remove this unused import 'krd.kurdestansoft.showin.like.Like'.(ÖÈŸ×8‚éŸ±0
-_
-java:S1128"BRemove this unused import 'krd.kurdestansoft.showin.like.LikeDTO'.(“—ÌÇ8‚‚éŸ±0
-_
-java:S1128
-"CRemove this unused import 'javax.annotation.security.RolesAllowed'.(®®€8‚‚éŸ±0
